@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails',        	'4.2.2'
+gem 'bcrypt'
 gem 'sass-rails', 		'~> 4.0.3'
 gem 'bootstrap-sass'
 gem 'uglifier',     	'2.5.3'
