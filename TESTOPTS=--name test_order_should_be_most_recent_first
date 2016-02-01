@@ -1,0 +1,19 @@
+Run options: --seed 51484
+
+# Running:
+
+F....
+
+Finished in 0.661327s, 7.5606 runs/s, 7.5606 assertions/s.
+
+  1) Failure:
+MicropostTest#test_order_should_be_most_recent_first [/home/palaiologos/Odin/Ruby-on-Rails/Intro-to-Rails/sample_app/test/models/micropost_test.rb:30]:
+--- expected
++++ actual
+@@ -1 +1 @@
+-#<Micropost id: 941832919, content: "Writing a short test", user_id: nil, created_at: "2016-01-31 21:33:11", updated_at: "2016-01-31 21:33:11">
++#<Micropost id: 12348100, content: "Cat video content", user_id: nil, created_at: "2016-01-31 18:33:11", updated_at: "2016-01-31 21:33:11">
+
+
+5 runs, 5 assertions, 1 failures, 0 errors, 0 skips
+]2;[Minitest results] 5 tests

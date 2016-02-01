@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_many :microposts, dependent: :destroy
   attr_accessor :remember_token
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }
@@ -11,6 +12,10 @@ class User < ActiveRecord::Base
   has_secure_password
   validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
 
+  # Defines a proto-feed.
+  def feed
+    Micropost.where("user_id = ?", id)
+  end
 
   # Returns the has digest of the given string.
   def User.digest(string)

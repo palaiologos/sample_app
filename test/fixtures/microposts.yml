@@ -1,0 +1,28 @@
+# Fixtures
+
+orange:
+  content: "Orange time"
+  created_at: <%= 10.minutes.ago %>
+  user: bill
+
+tau_manifesto:
+  content: "Tau manifesto content"
+  created_at: <%= 3.years.ago %>
+  user: bill
+
+cat_video:
+  content: "Cat video content"
+  created_at: <%= 3.hours.ago %>
+  user: bill
+
+most_recent:
+  content: "Writing a short test"
+  created_at: <%= Time.zone.now %>
+  user: bill
+
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(5) %>
+  created_at: <%= 42.days.ago %>
+  user: bill
+<% end %>
